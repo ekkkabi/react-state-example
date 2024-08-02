@@ -1,10 +1,9 @@
 import { RootState } from '@redux/config/store';
-import { useAppDispatch } from '@redux/hooks/hook';
+import { useAppDispatch, useAppSelector } from '@redux/hooks/hook';
 import { minus, plus } from '@redux/reducer/counter';
-import { useSelector } from 'react-redux';
 
 const Counter = () => {
-    const counter = useSelector((state: RootState) => state.counter.value);
+    const counter = useAppSelector((state: RootState) => state.counter.value);
     const dispatch = useAppDispatch();
 
     return (
