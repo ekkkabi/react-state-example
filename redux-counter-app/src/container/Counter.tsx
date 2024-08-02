@@ -1,6 +1,6 @@
-import { minus, plus } from '@redux/config/counter';
 import { RootState } from '@redux/config/store';
 import { useAppDispatch } from '@redux/hooks/hook';
+import { minus, plus } from '@redux/reducer/counter';
 import { useSelector } from 'react-redux';
 
 const Counter = () => {
