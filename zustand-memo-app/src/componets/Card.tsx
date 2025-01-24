@@ -1,4 +1,6 @@
-const Card = () => {
+import { ReactNode } from 'react';
+
+const Card = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       <div
@@ -37,7 +39,11 @@ const Card = () => {
           }}
         />
       </div>
-      <div style={{ width: '500px', height: '700px', backgroundColor: '#efefef' }} />
+      <div
+        style={{ width: '500px', height: '700px', backgroundColor: '#efefef', overflowY: 'auto' }}
+      >
+        {children}
+      </div>
     </div>
   );
 };
